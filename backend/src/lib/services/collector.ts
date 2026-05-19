@@ -76,7 +76,7 @@ export async function runCollection(opts: {
 
   const settled = await Promise.allSettled(
     adapters.map(async (adapter) => {
-      const result = await adapter.collect({ timeoutMs: 60_000 });
+      const result = await adapter.collect({ timeoutMs: 120_000 });
       let inserted = 0;
       let updated = 0;
       let status: RunSummary['status'] = result.status;
