@@ -2,7 +2,7 @@
 const ALLOWED_ORIGIN = process.env.NEXT_PUBLIC_APP_URL || 'https://aieventradar.vercel.app';
 
 const nextConfig = {
-  serverExternalPackages: ['cheerio'],
+  serverExternalPackages: ['cheerio', 'playwright'],
   async headers() {
     return [
       {
