@@ -1,0 +1,10 @@
+{
+  "crons": [
+    { "path": "/api/cron/collect", "schedule": "0 23 * * *" },
+    { "path": "/api/cron/notify", "schedule": "0 0 * * *" }
+  ],
+  "functions": {
+    "src/app/api/cron/collect/route.ts": { "maxDuration": 60 },
+    "src/app/api/cron/notify/route.ts": { "maxDuration": 30 }
+  }
+}
